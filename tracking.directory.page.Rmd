@@ -1,5 +1,5 @@
 ---
-title: "EAAFP Tracking Projects Directory"
+title: "East Asian-Australasian Flyway Shorebird Tracking Projects Directory"
 
 date: "24 Jan 2021"
 output: html_document
