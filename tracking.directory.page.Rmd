@@ -1,7 +1,7 @@
 ---
 title: "East Asian-Australasian Flyway Shorebird Tracking Projects Directory"
 
-date: "24 Jan 2021"
+date: "4 Feb 2021"
 output: html_document
 
 knit: (function(input_file, encoding) {
@@ -11,7 +11,7 @@ knit: (function(input_file, encoding) {
  output_file=file.path(dirname(input_file), out_dir, 'index.html'))})
 
 ---
-This page is in development. Official release is in mid-February 2021
+This page is in development. Official release is in May 2021
 
 To add your project, please fill in this form [here.](https://form.jotform.com/210225083733043)
 
@@ -25,7 +25,7 @@ library(DT)
 library(readxl)
 datapath<-('C:/Users/chan/work/EAAF tracking group/')
  d.project<-
-      read_excel(paste(datapath,'d.project.xlsx',sep=''),col_types=c(rep( "guess",6),'numeric','numeric',rep( "guess",4)))
+      read_excel(paste(datapath,'d.project.xlsx',sep=''),col_types=c(rep( "guess",6),'numeric','numeric',rep( "guess",5)))
  
  source('C:/Users/chan/work/EAAF tracking group/create.map.R')
  
@@ -47,6 +47,7 @@ dt<-data.frame(Species=d$species,
                Tag.Type=d$tag.type,
                Tagging.Location=paste( "<b>",d$site.name,'</b>, ',d$country,sep=''),
                Organisation=paste(d$org, ": <a href=", d$url,">", 'Project website', "</a>",sep=''),
-               Contact=paste(" <a href='mailto:",d$contact.email,"'>",d$contact.name, "</a>",sep=''))
+               Contact=paste(" <a href='mailto:",d$contact.email,"'>",d$contact.name, "</a>",sep=''),
+                Publications=d$publications)
 datatable(dt, escape = FALSE)
 ```
