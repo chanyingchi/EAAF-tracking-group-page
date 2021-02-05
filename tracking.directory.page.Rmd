@@ -40,7 +40,7 @@ m
 
 List of tracking projects:
 
-```{r echo=FALSE, layout="l-body-outset"}
+```{r echo=FALSE, layout="l-body-outset", warning=FALSE}
 library(DT)
 d<-d.project
 dt<-data.frame(Species=d$species,
