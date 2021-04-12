@@ -1,7 +1,7 @@
 ---
 title: "East Asian-Australasian Flyway Shorebird Tracking Projects Directory"
 
-date: "17 Feb 2021"
+date: "12 Apr 2021"
 output: html_document
 
 knit: (function(input_file, encoding) {
@@ -29,7 +29,7 @@ datapath<-('C:/Users/chan/work/EAAF tracking group/')
  
  source('C:/Users/chan/work/EAAF tracking group/create.map.R')
  
-   m<-create.map(d.project,10)
+   m<-create.map(d.project,circle.size=12)
 
 ```
 
@@ -54,5 +54,6 @@ stringsAsFactors =F)
 r<-which(is.na(d$url))
 
 dt$Organisation[r]<-d$org[r]
-datatable(dt, escape = FALSE)
+dt<-dt[order(dt$Species,dt$Tagging.Location),]
+datatable(dt, rownames=FALSE,escape = FALSE)
 ```
