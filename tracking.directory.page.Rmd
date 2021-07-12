@@ -1,7 +1,7 @@
 ---
 title: "East Asian-Australasian Flyway Shorebird Tracking Projects Directory"
 
-date: "12 Apr 2021"
+date: "12 July 2021"
 output: html_document
 
 knit: (function(input_file, encoding) {
@@ -11,7 +11,7 @@ knit: (function(input_file, encoding) {
  output_file=file.path(dirname(input_file), out_dir, 'index.html'))})
 
 ---
-This page is in development. Official release is in May 2021
+This page is in development. Official release is in August 2021
 
 To add your project, please fill in this form [here.](https://form.jotform.com/210225083733043)
 
